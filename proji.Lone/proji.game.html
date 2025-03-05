@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulletinX - أخبار الألعاب</title>
+    <link rel="website icon" type="png" href="logo1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet" rel="preload" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Naskh Arabic', serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #28a745 !important; /* أخضر */
+        }
+        .news-ticker {
+            background: linear-gradient(90deg, #28a745, #218838); /* أخضر */
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .ticker-content {
+            animation: ticker 15s linear infinite;
+            white-space: nowrap;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+        .article-meta {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .btn-primary {
+            background-color: #28a745; /* أخضر */
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- شريط التنقل  -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-3 fw-bold" href="#" aria-label="BulletinX الصفحة الرئيسية">
+                <i class="fas fa-microchip me-3"></i>BulletinX
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل القائمة">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mx-2"><a class="nav-link" href="proji.ai.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="proji.Devices.html"><i class="fas fa-laptop"></i> الأجهزة</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link active" href="proji.game.html"><i class="fas fa-gamepad"></i> الألعاب</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="proji.pragramming.html"><i class="fas fa-code"></i> البرمجيات</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="proji.aii.html"><i class="fas fa-robot"></i> الذكاء الاصطناعي</a></li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link btn btn-primary px-4 " href="proji.login.html"><i class="fas fa-user-plus"></i>التسجيل</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- شريط الأخبار العاجلة -->
+    <div class="news-ticker">
+        <div class="container">
+            <div class="ticker-content">
+                <i class="fas fa-gamepad"></i>
+                <span class="badge bg-warning me-3">عاجل </span>
+                إطلاق لعبة Cyberpunk 2078 بنسخة محسّنة - 
+                لعبة Elden Ring 2 تحقق مبيعات قياسية - 
+                تحديث جديد للعبة Fortnite يضيف خريطة جديدة
+            </div>
+        </div>
+    </div>
+
+    <!-- القسم الرئيسي للأخبار -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4 display-5 fw-bold"><i class="fas fa-gamepad me-3"></i>أخبار الألعاب</h2>
+        
+        <div class="row g-4">
+            <!-- البطاقات -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="cyber.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">إطلاق لعبة Cyberpunk 2078</h5>
+                        <p class="card-text">كشفت شركة CD Projekt Red عن النسخة المحسّنة من لعبة Cyberpunk 2078 مع رسومات مذهلة...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 2 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="elden.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">Elden Ring 2 تحقق مبيعات قياسية</h5>
+                        <p class="card-text">حققت لعبة Elden Ring 2 مبيعات قياسية في أول أسبوع من إطلاقها...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 4 ساعات</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="fort.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">تحديث جديد للعبة Fortnite</h5>
+                        <p class="card-text">أضاف تحديث جديد للعبة Fortnite خريطة جديدة وأسلحة مميزة...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 6 ساعات</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="rock.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة جديدة من Rockstar Games</h5>
+                        <p class="card-text">كشفت Rockstar Games عن لعبة جديدة ستكون متاحة في 2026...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 8 ساعات</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="cod.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">إطلاق لعبة Call of Duty: Modern Warfare 4</h5>
+                        <p class="card-text">أعلنت Activision عن إطلاق لعبة Call of Duty: Modern Warfare 4...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 10 ساعات</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="assa.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة Assassin's Creed: Origins تحصل على تحديث</h5>
+                        <p class="card-text">حصلت لعبة Assassin's Creed: Origins على تحديث جديد يحسن الأداء...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 12 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="fifa.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة FIFA 26 تعلن عن ميزات جديدة</h5>
+                        <p class="card-text">أعلنت EA Sports عن ميزات جديدة في لعبة FIFA 26...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 14 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="witch.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة The Witcher 4 تعلن عن تاريخ الإطلاق</h5>
+                        <p class="card-text">أعلنت CD Projekt Red عن تاريخ إطلاق لعبة The Witcher 4...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 16 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="reddead.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة Red Dead Redemption 3 تعلن عن تفاصيل جديدة</h5>
+                        <p class="card-text">كشفت Rockstar Games عن تفاصيل جديدة حول لعبة Red Dead Redemption 3...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 18 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="gta6.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة GTA VI تعلن عن تاريخ الإطلاق</h5>
+                        <p class="card-text">أعلنت Rockstar Games عن تاريخ إطلاق لعبة GTA VI...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 20 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="hozo.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة Horizon Forbidden West تحصل على تحديث</h5>
+                        <p class="card-text">حصلت لعبة Horizon Forbidden West على تحديث جديد يحسن الأداء...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 22 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="gow.jpg" class="card-img-top" alt="صورة تمثيلية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">الألعاب</span>
+                        <h5 class="card-title fw-bold">لعبة God of War: Ragnarok تعلن عن تاريخ الإطلاق</h5>
+                        <p class="card-text">أعلنت Sony عن تاريخ إطلاق لعبة God of War: Ragnarok...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-sm btn-outline-success">اقرأ المزيد</a>
+                            <small class="text-muted">منذ 24 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="mb-4"><i class="fas fa-info-circle me-2"></i>عن BulletinX</h4>
+                    <p>منصة إخبارية متخصصة في الأخبار الإلكترونية، نقدم تغطية شاملة لأحدث التطورات في التكنولوجيا والألعاب والبرمجيات.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3" aria-label="تابعنا على فيسبوك"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white" aria-label="تابعنا على يوتيوب"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="تابعنا على تويتر"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="تابعنا على إنستغرام"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="mb-4"><i class="fas fa-link me-2"></i>روابط سريعة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none mb-2 d-block">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-white text-decoration-none mb-2 d-block">اتفاقية الاستخدام</a></li>
+                        <li><a href="#" class="text-white text-decoration-none mb-2 d-block">اتصل بنا</a></li>
+                        <li><a href="#" class="text-white text-decoration-none mb-2 d-block">الوظائف الشاغرة</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="mb-4"><i class="fas fa-envelope me-2"></i>النشرة البريدية</h4>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="ادخل بريدك الإلكتروني" aria-label="ادخل بريدك الإلكتروني للاشتراك">
+                            <button class="btn btn-primary" type="submit">اشترك</button>
+                        </div>
+                        <small class="text-muted">سنرسل لك آخر أخبار التكنولوجيا أسبوعيًا</small>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">© 2025 BulletinX. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
